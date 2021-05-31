@@ -1,0 +1,1 @@
+{"version":3,"file":"rest_api.js","sourceRoot":"","sources":["../src/rest_api.ts"],"names":[],"mappings":";;;AAEa,QAAA,aAAa,GAAG,CAAC,GAAoB,EAAE,EAAE;IACpD,GAAG,CAAC,GAAG,CAAC,GAAG,EAAE,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE;QACxB,GAAG,CAAC,IAAI,CAAC,sCAAsC,CAAC,CAAC;IACnD,CAAC,CAAC,CAAC;AACL,CAAC,CAAC"}
