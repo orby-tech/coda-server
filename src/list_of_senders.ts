@@ -29,7 +29,7 @@ export class ListOfSenders {
         subject: "1231234124",
       },
       {
-        id: "123123123",
+        id: "123123324123",
         target: TargetEnum.email,
         count_of_days: 42,
         last_send_date: "last_send_date",
@@ -52,5 +52,9 @@ export class ListOfSenders {
       event_date: newSender.date,
       subject: newSender.subject,
     });
+  }
+
+  deleteItem(id: string) {
+    this.listOfSenders = this.listOfSenders.filter((item) => item.id == id);
   }
 }

@@ -11,4 +11,8 @@ export const rest_api_fill = (app: express.Express) => {
   app.post("/list-of-senders/add/", (req: { body: SenderInputModel }, res) => {
     listOfSenders.addItem(req.body);
   });
+
+  app.post("/list-of-senders/delete/", (req: { body: { id: string } }, res) => {
+    listOfSenders.deleteItem(req.body.id);
+  });
 };
