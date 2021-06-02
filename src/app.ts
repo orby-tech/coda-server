@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 rest_api_fill(app);
 
-/* @ts-ignore */
 app.listen(port, () => {
   return console.log(`server is listening on ${port}`);
 });
