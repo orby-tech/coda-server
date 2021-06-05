@@ -1,11 +1,16 @@
 import express from 'express'
-import { getListOfSenders, addItemToListOfSenders, deleteItemFromListOfSenders } from './rest_api'
+import { restApiFill, getListOfSenders, addItemToListOfSenders, deleteItemFromListOfSenders } from './rest_api'
 import request from 'supertest'
-let app:express.Express
+
+let app: express.Express
 
 describe('Rest api', () => {
   beforeEach(() => {
     app = express()
+  })
+  test('Check fill rest api', () => {
+    const res = restApiFill(app)
+    expect(res).toBe(undefined)
   })
   test('/list-of-senders/', async () => {
     app.use('/', getListOfSenders)
@@ -20,7 +25,7 @@ describe('Rest api', () => {
   })
 
   test('/list-of-senders/delete', async () => {
-    app.use('/', addItemToListOfSenders)
+    app.use('/', deleteItemFromListOfSenders)
     const { body } = await request(app).post('/list-of-senders/delete/')
     expect(Object.keys(body).length).toBe(0)
   })

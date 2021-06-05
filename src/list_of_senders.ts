@@ -10,9 +10,9 @@ export type SenderInputModel = {
 export type SenderType = {
   id: string;
   target: string;
-  count_of_days: number;
-  last_send_date: string;
-  event_date: string;
+  countOfDays: number;
+  lastSendDate: string;
+  eventDate: string;
   subject: string;
 };
 
@@ -23,17 +23,17 @@ export class ListOfSenders {
       {
         id: '123123123',
         target: TargetEnum.telegram,
-        count_of_days: 42,
-        last_send_date: 'last_send_date',
-        event_date: '2021-06-01',
+        countOfDays: 42,
+        lastSendDate: 'last_send_date',
+        eventDate: '2021-06-01',
         subject: '1231234124'
       },
       {
         id: '123123324123',
         target: TargetEnum.email,
-        count_of_days: 42,
-        last_send_date: 'last_send_date',
-        event_date: '2021-06-01',
+        countOfDays: 42,
+        lastSendDate: 'last_send_date',
+        eventDate: '2021-06-01',
         subject: '1231234124'
       }
     ]
@@ -47,9 +47,9 @@ export class ListOfSenders {
     this.listOfSenders.push({
       id: uuid4(),
       target: TargetEnum[newSender.target],
-      count_of_days: null,
-      last_send_date: '',
-      event_date: newSender.date,
+      countOfDays: null,
+      lastSendDate: '',
+      eventDate: newSender.date,
       subject: newSender.subject
     })
   }
