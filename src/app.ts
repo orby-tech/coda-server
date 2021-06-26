@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import http from 'http'
-import { Server } from 'socket.io'
 import { restApiFill } from './rest_api'
 import { createIO } from './io'
 const app = express()

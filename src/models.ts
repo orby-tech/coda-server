@@ -1,4 +1,4 @@
 export enum TargetEnum {
-  telegram = "telegram",
-  email = "email",
+  telegram = 'telegram',
+  email = 'email',
 }

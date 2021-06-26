@@ -8,12 +8,12 @@ export const getListOfSenders = (req, res) => {
   res.send(listOfSenders.getList())
 }
 
-export const addItemToListOfSenders = (req: { body: SenderInputModel }, res) => {
+export const addItemToListOfSenders = (req: { body: SenderInputModel }) => {
   listOfSenders.addItem(req.body)
   io.emit('ListOfSendersUpdated')
 }
 
-export const deleteItemFromListOfSenders = (req: { body: { id: string } }, res) => {
+export const deleteItemFromListOfSenders = (req: { body: { id: string } }) => {
   listOfSenders.deleteItem(req.body.id)
   io.emit('ListOfSendersUpdated')
 }
